@@ -3,6 +3,6 @@ const index = (req, res) =>{
     res.render('index',{title : "Travlr Getaways"});
 };
 
-MediaSourceHandle.exports = {
+module.exports = {
     index
 }
