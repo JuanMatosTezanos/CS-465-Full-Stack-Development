@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule,JsonPipe } from '@angular/common';
 import { trips } from '../data/trips';
 
 @Component({
   selector: 'app-trip-listing',
-  imports: [],
+  imports: [JsonPipe],
   templateUrl: './trip-listing.html',
   styleUrl: './trip-listing.css',
 })
