@@ -44,7 +44,13 @@ export class TripListing implements OnInit {
       this.loadTrips();
     });
   }
+
+  public handleEditTrip(trip: Trip): void {
+    localStorage.setItem('tripCode', trip.code);
+    this.router.navigate(['edit-trip']);
+  }
 }
+
 
 
 

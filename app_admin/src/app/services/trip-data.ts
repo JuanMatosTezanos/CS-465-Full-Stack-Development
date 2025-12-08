@@ -18,6 +18,17 @@ return this.http.get<Trip[]>(url);
     const url = 'http://localhost:3000/api/trips';  
 return this.http.post<Trip>(url, formData);
   }
+
+  getTrip(tripCode: string): Observable<Trip> {
+    const url = `http://localhost:3000/api/trips/${tripCode}`;
+    return this.http.get<Trip>(url);
+  }
+
+  updateTrip(tripCode: string, formData: Trip): Observable<Trip> {
+    const url = `http://localhost:3000/api/trips/${tripCode}`;
+    return this.http.put<Trip>(url, formData);
+  }
+
 }
 
 
