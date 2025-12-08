@@ -8,10 +8,10 @@ import { TripData } from '../services/trip-data';
   selector: 'app-add-trip', 
   standalone: true, 
   imports: [CommonModule, ReactiveFormsModule],   
-  templateUrl: './add-trip.component.html', 
-  styleUrls: ['./add-trip.component.css']         
+  templateUrl: './add-trip.html', 
+  styleUrls: ['./add-trip.css']         
 }) 
-export class AddTripComponent implements OnInit { 
+export class AddTrip implements OnInit { 
   addForm!: FormGroup; 
   submitted = false; 
  
@@ -38,7 +38,7 @@ export class AddTripComponent implements OnInit {
   public onSubmit() { 
     this.submitted = true; 
     if (this.addForm.valid) { 
-      this.tripService.AddTrip(this.addForm.value) 
+      this.tripService.addTrip(this.addForm.value) 
         .subscribe({ 
           next: (data: any) => { 
             console.log(data); 
